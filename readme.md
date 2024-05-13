@@ -1,5 +1,3 @@
-Sure, here's a README.md file for your Python script:
-
 # Random String Generator
 
 This is a simple Python script that generates a random string of specified length and copies it to the clipboard.
@@ -17,6 +15,7 @@ This is a simple Python script that generates a random string of specified lengt
 4. Paste the copied string anywhere you want.
 
 ## Example
+
 Certainly! Here's the updated section:
 
 ```python
