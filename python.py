@@ -2,10 +2,18 @@ import string
 import random
 from pyperclip import copy
 
-def generate_random_string(length: int) -> str:
-    random_string = ''.join(random.choice(string.ascii_letters) for _ in range(length))
-    copy(random_string)
-    return random_string
-inputLength:int = int(input("Enter the length of the string You want to generate...It automatically copied ->   "))
-print(generate_random_string(inputLength))
-print("\ncopied to clipboard! paste it anywhere you want...")
+def generate_random_string() -> str:
+   try:
+    length:int = int(input("Enter the length of the string(0-1000000) you want to generate...  "))
+    if length > 0 and length < 100000:
+        random_string:str = ''.join(random.choice(string.ascii_letters + '\n') for _ in range(length))
+        print(random_string)
+        
+        copy(random_string)
+        print('\nCopied to clipboard paste it anywhere!')
+        return random_string
+    print('Please enter a value between "0" and "1000000"!')
+   except ValueError:
+        print('Please enter a numeric value between "0" and "1000000"!')
+
+generate_random_string()
